@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="{% static '.\portfolio\css\reset.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '.\portfolio\css\portfolio.css' %}" type="text/css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+        <div class="header__top">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../">Main</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/service/">Services</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../portfolio/">Portfolio</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../blog/">Blog</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../about_myself/">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__phone" href="tel:+380501753343">+38(050)175-33-43</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="portfolio page-section">
+    <div class="container">
+      <h3 class="portfolio__title">
+        PORTFOLIO
+              <span>my proud works</span>
+      </h3>
+    </div>
+    <div class="portfolio__gallery">
+      <div class="portfolio__items">
+          {% block content%} {% endblock %}
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+      <div class="footer__items">
+          <div class="footer__item">
+              <p>Telephone number:</p>
+              <a href="tel:+380501753343">+38(050)175-33-43</a>
+          </div>
+          <div class="footer__item">
+              <p>Mail:</p>
+              <a href="mailto:tenyapro@gmail.com">tenyapro@gmail.com</a>
+          </div>
+          <div class="footer__item">
+              <p>Socials:</p>
+              <a href="https://www.facebook.com/chilipizzadesign" target="_blank">Facebook</a>
+              <a href="https://www.instagram.com/khrystyna_prokopenko/" target="_blank">Instagram</a>
+          </div>
+      </div>
+      <p class="footer__end">MY DESIGN © All rights reserved</p>
+  </footer>
+
+</body>
+</html>

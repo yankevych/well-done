@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About myself</title>
+    <link rel="stylesheet" href="{% static '.\about_myself\css\reset.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '.\about_myself\css\about_myself.css' %}" type="text/css">
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="../">Main</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/service/">Services</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="../portfolio/">Portfolio</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="../blog/">Blog</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="../about_myself/">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__phone" href="tel:+380501753343">+38(050)175-33-43</a>
+            </div>
+        </div>
+    </header>
+
+    </div>
+        <img class="main_image" src="{% static '.\about_myself\media\photo1.jpg' %}" alt="photo">
+    </div>
+
+    <section class="advice page-section" >
+        <div class="container">
+            <div class="advice__inner">
+                <div class="advice__form">
+                    <div class="advice__title">
+                        CONTACT
+                        <span>me</span>
+                    </div>
+                    <form class="advice__form" >
+                        <div class="advice__form--title"></div>
+                        <input class="advice__form-name" type="text" placeholder="Name">
+                        <input class="advice__form-phone" type="text" placeholder="Phone">
+                        <button class="advice__form__btn" type="submit">SEND</button>
+                    </form>
+                </div>
+                <img class="advice__image" src="{% static '.\main\media\background_main.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__items">
+            <div class="footer__item">
+                <p>Telephone number:</p>
+                <a href="tel:+380501753343">+38(050)175-33-43</a>
+            </div>
+            <div class="footer__item">
+                <p>Mail:</p>
+                <a href="mailto:tenyapro@gmail.com">tenyapro@gmail.com</a>
+            </div>
+            <div class="footer__item">
+                <p>Socials:</p>
+                <a href="https://www.facebook.com/chilipizzadesign" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/khrystyna_prokopenko/" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <p class="footer__end">MY DESIGN © All rights reserved</p>
+    </footer>
+
+
+</body>
+</html>

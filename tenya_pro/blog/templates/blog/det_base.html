@@ -1,0 +1,9 @@
+{% extends "./detail.html" %}
+
+{% block content %}
+    <h3 class="blog__title">{{blog.blog_title}}</h3>
+    <img src="{{blog.blog_image.url}}" height="600">
+    <p>{{blog.blog_text}}</p>
+{% endblock %}
+
+

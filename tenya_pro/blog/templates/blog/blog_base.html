@@ -1,0 +1,15 @@
+{% extends "./blog.html" %}
+
+{% block content%}
+
+        {% for i in blog_list %}
+<div class="leftcolumn">
+    <div class="card">
+      <a href="{% url 'blog:det_base' i.id %}">{{i.blog_title}}</a>
+      <h5>{{i.blog_pub_date}}</h5>
+      <img src="{{i.blog_image.url}}" height="300">
+    </div>
+</div>
+        {% endfor %}
+
+{% endblock %}

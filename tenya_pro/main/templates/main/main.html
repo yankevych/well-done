@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="{% static '.\main\css\reset.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '.\main\css\fotorama.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '.\main\css\main.css' %}" type="text/css">
+
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__top">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../">Main</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/service/">Services</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../portfolio/">Portfolio</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../blog/">Blog</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../about_myself/">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__phone" href="tel:+380501753343">+38(050)175-33-43</a>
+        </div>
+        <h1 class="header__title">
+            Khrystyna Prokopenko
+            <span>interior design</span>
+        </h1>
+    </div>
+    </header>
+
+    <section class="service">
+        <h3 class="service__title title">
+              SERVICES
+              <span>what we can do</span>
+        </h3>
+        <div class="service__content">
+            <div class="service__gallery">
+                <div class="fotorama"
+                    data-width="800"
+                    data-height="550"
+                    data-transition="crossfade"
+                    data-loop="true"
+                    data-autoplay="3000">
+                    <img src="{% static '.\main\media\photo1.jpg' %}" alt="">
+                    <img src="{% static '.\main\media\photo2.jpg' %}" alt="">
+                    <img src="{% static '.\main\media\photo3.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="service__text">
+                <p>INTERIOR DESIGN We create spaces in which it is pleasant and comfortable to be.
+                  Our experts understand how important a unique and atmospheric modern interior design is.
+                  We carry out design projects of any complexity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio page-section">
+    <div class="container">
+      <h3 class="portfolio__title">
+        PORTFOLIO
+              <span>my proud works</span>
+      </h3>
+    </div>
+          {% block content%} {% endblock %}
+    </section>
+
+    <section class="advice page-section" >
+        <div class="container">
+            <div class="advice__inner">
+                <div class="advice__form">
+                    <div class="advice__title">
+                        CONTACT
+                        <span>me</span>
+                    </div>
+                    <form class="advice__form" >
+                        <div class="advice__form--title"></div>
+                        <input class="advice__form-name" type="text" placeholder="Name">
+                        <input class="advice__form-phone" type="text" placeholder="Phone">
+                        <button class="advice__form__btn" type="submit">SEND</button>
+                    </form>
+                </div>
+                <img class="advice__image" src="{% static '.\main\media\background_main.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__items">
+            <div class="footer__item">
+                <p>Telephone number:</p>
+                <a href="tel:+380501753343">+38(050)175-33-43</a>
+            </div>
+            <div class="footer__item">
+                <p>Mail:</p>
+                <a href="mailto:tenyapro@gmail.com">tenyapro@gmail.com</a>
+            </div>
+            <div class="footer__item">
+                <p>Socials:</p>
+                <a href="https://www.facebook.com/chilipizzadesign" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/khrystyna_prokopenko/" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <p class="footer__end">MY DESIGN © All rights reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static '.\main\js\fotorama.js' %}"></script>
+
+</body>
+</html>

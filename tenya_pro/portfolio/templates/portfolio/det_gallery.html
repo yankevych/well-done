@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="{% static '.\portfolio\css\reset.css' %}" type="text/css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '.\portfolio\css\det_gallery.css' %}" type="text/css">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+        <div class="header__top">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="../../">Main</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/service/">Services</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/portfolio/">Portfolio</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/blog/">Blog</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="/about_myself/">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header__phone" href="tel:+380501753343">+38(050)175-33-43</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="portfolio page-section">
+    {% block content%} {% endblock %}
+  </section>
+
+
+  <footer class="footer">
+      <div class="footer__items">
+          <div class="footer__item">
+              <p>Telephone number:</p>
+              <a href="tel:+380501753343">+38(050)175-33-43</a>
+          </div>
+          <div class="footer__item">
+              <p>Mail:</p>
+              <a href="mailto:tenyapro@gmail.com">tenyapro@gmail.com</a>
+          </div>
+          <div class="footer__item">
+              <p>Socials:</p>
+              <a href="https://www.facebook.com/chilipizzadesign" target="_blank">Facebook</a>
+              <a href="https://www.instagram.com/khrystyna_prokopenko/" target="_blank">Instagram</a>
+          </div>
+      </div>
+      <p class="footer__end">MY DESIGN © All rights reserved</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{% static '.\portfolio\js\fotorama.js' %}"></script>
+
+</body>
+</html>

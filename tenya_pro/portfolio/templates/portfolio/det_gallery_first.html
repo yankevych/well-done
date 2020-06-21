@@ -1,0 +1,26 @@
+{% extends "./det_gallery.html" %}
+
+{% block content %}
+
+<div class="portfolio__gallery">
+       {% for j in det_gallery %}
+        <p>{{j.port_title}}</p>
+        <p>{{j.port_text}}</p>
+        {% endfor %}
+        <div class="fotorama"
+            data-width="800"
+            data-height="650"
+            data-transition="crossfade"
+            data-loop="true"
+            data-autoplay="3000"
+            data-allowfullscreen="true">
+            {% for j in det_gallery %}
+            <img src="{{j.port_image.url}}">
+            {% endfor %}
+            {% for i in list_all %}
+            <img src="{{i.port_images.url}}">
+            {% endfor %}
+        </div>
+</div>
+
+{% endblock %}

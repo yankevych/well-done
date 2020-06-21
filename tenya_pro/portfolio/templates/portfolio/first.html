@@ -1,0 +1,18 @@
+{% extends "./portfolio.html" %}
+
+{% block content%}
+
+        {% for i in port_list %}
+
+<div class="portfolio__gallery">
+      <div class="portfolio__items">
+          <div class="portfolio__item animation">
+              <a href="{% url 'portfolio:det_gallery' i.id %}"><img src="{{i.port_image.url}}" height=300 alt=""></a>
+              <a class="portfolio__text" href="{% url 'portfolio:det_gallery' i.id %}">{{i.port_title}}</a>
+          </div>
+      </div>
+</div>
+        {% endfor %}
+
+{% endblock %}
+
